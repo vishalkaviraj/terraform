@@ -22,3 +22,9 @@ resource "snowflake_database" "demo_db" {
   name    = "DEMO_DB"
   comment = "Database for Snowflake Terraform demo"
 }
+
+resource "snowflake_database" "simple" {
+  name                        = "testing"
+  comment                     = "test comment"
+  data_retention_time_in_days = 3
+}
